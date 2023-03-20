@@ -43,6 +43,90 @@ class InteractiveCoding():
       weeks = years_remaining * 52
       print(f"You have {days} days. {weeks} weeks, and {months} months left.")
 
+  class Day3():
+    # control flow and logical operators
+    def odd_or_even(number):
+      if number % 2 == 0:
+        print("This is an even number.")
+      else:
+        print("This is an odd number.")
+
+    def bmi_2(height, weight):
+      # math operator
+      bmi = round(int(weight) / (float(height) * float(height)))
+
+      if bmi < 18.5:
+        print(f"Your BMI is {bmi}, you are underweight")
+      elif bmi > 18.5 and bmi <= 25:
+        print(f"Your BMI is {bmi}, you have a normal weight")
+      elif bmi > 25 and bmi <= 30:
+        print(f"Your BMI is {bmi}, you are slightly overweight")
+      elif bmi > 30 and bmi <= 35:
+        print(f"Your BMI is {bmi}, you are obese")
+      else:
+        print(f"Your BMI is {bmi}, you are clinically obese")
+
+    def leap_year(years):
+      if years % 4 == 0:
+        print("Leap year.")
+      elif years % 100 == 0:
+        print("Not leap year.")
+      elif years % 400 == 0:
+        print("Leap year.")
+      else:
+        print("Not leap year.")
+
+    def pizza_order():
+      print("Welcome to Python Pizza Deliveries! ")
+      size = input("What size pizza do you want? S, M, or L ").lower()
+      add_pepperoni = input("Do you want pepperoni? Y or N ").lower()
+      extra_cheese = input("Do you want extra cheese? Y or N ").lower()
+
+      if size == 's':
+        harga = 15
+        if add_pepperoni == 'y':
+          total = harga + 2
+          if extra_cheese == 'y':
+            extra = total + 1
+            print(f"Your final bill is ${extra}")
+          else:
+            print(f"Your final bill is ${total}")
+        elif add_pepperoni == 'n' and extra_cheese == 'y':
+          extra = harga + 1
+          print(f"Your final bill is ${extra}")
+        else:
+          print(f"Your final bill is ${harga}")
+
+      elif size == 'm':
+        harga = 20
+        if add_pepperoni == 'y':
+          total = harga + 3
+          if extra_cheese == 'y':
+            extra = total + 1
+            print(f"Your final bill is ${extra}")
+          else:
+            print(f"Your final bill is ${total}")
+        elif add_pepperoni == 'n' and extra_cheese == 'y':
+          extra = harga + 1
+          print(f"Your final bill is ${extra}")
+
+      elif size == 'l':
+        harga = 25
+        if add_pepperoni == 'y':
+          total = harga + 3
+          if extra_cheese == 'y':
+            extra = total + 1
+            print(f"Your final bill is ${extra}")
+          else:
+            print(f"Your final bill is ${total}")
+        elif add_pepperoni == 'n' and extra_cheese == 'y':
+          extra = harga + 1
+          print(f"Your final bill is ${extra}")
+        else:
+          print(f"Your final bill is ${harga}")
+      else:
+        print("Your input is invalid")
+        
 class Projects():
 # Project of 100 Day code python
   def band_name_generator():
@@ -59,3 +143,6 @@ class Projects():
     pay = (total_bill + bill_after_percentage ) / split_bill
     print(round(pay, 2))
 
+
+
+InteractiveCoding.Day3.pizza_order()
