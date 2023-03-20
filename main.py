@@ -126,7 +126,54 @@ class InteractiveCoding():
           print(f"Your final bill is ${harga}")
       else:
         print("Your input is invalid")
+      
+    def love_calculator():
+      name1 = input("input your name : ")
+      name2 = input("input her / his name : ")
+
+      combined = name1 + name2
+      T = combined.lower().count("t")
+      R = combined.lower().count("r")
+      U = combined.lower().count("u")
+      E = combined.lower().count("e")
+      TRUE = T + R + U + E
+
+      L = combined.lower().count("l")
+      O = combined.lower().count("o")
+      V = combined.lower().count("v")
+      E = combined.lower().count("e")
+      LOVE = L + O + V + E
+      lovescore = str(TRUE) + str(LOVE)
+
+      if int(lovescore) <= 10 or int(lovescore) >= 90:
+        print(f"Your score is {lovescore}, you go together like coke and mentos.")
+      elif int(lovescore) >= 40 and int(lovescore) <= 50:
+        print(f"Your score is {lovescore}, you are alright together.")
+      else:
+        print(f"Your score is {lovescore}.")
         
+  class Day4():
+    # Ramdomisation and python lists
+    def heads_or_tails():
+      import random as r
+      int_random = r.randint(0,1)
+      if int_random == 1:
+        print("Heads")
+      else:
+        print("Tails")
+      
+    def banker_roulete():
+      import random
+      # Split string method
+      names_string = input("Give me everybody's names, separated by a comma. ")
+      names = names_string.split(", ")
+      # 🚨 Don't change the code above 👆
+      box = len(names)
+      random_number = random.randint(0, box - 1)
+      random_name = names[random_number]
+      print(f"{random_name} is going to pay the bill !")
+      
+InteractiveCoding.Day4.banker_roulete()
 class Projects():
 # Project of 100 Day code python
   def band_name_generator():
@@ -143,6 +190,27 @@ class Projects():
     pay = (total_bill + bill_after_percentage ) / split_bill
     print(round(pay, 2))
 
+  def treasure_island():
+    answer = input("Your are in front of gate, choose left(l) or right(r)? ").lower()
 
+    if answer == "l":
+      answer2 = input("In front of you there is river, choose swim(s) or wait(w) a boat? ").lower()
+      if answer2 == "w":
+        answer3 = input("In front of you there is 3 gate, blue(b), yellow(y), and red(r), you can choose one of them? ").lower()
+        if answer3 == "y":
+          print("You win")
+        elif answer3 == "b":
+          print("Eaten by beasts. Game over.")
+        elif answer3 == "r":
+          print("Burned by fire. Game over.")
+        else:
+          print("your input is invalid.")
+      elif answer2 == "s":
+        print("Attacked by trout. Game over.")
+      else:
+        print("your input is invalid.")
+    elif answer == "r":
+      print("Fall into a hole. Game over.")
+    else:
+      print("your input is invalid.")
 
-InteractiveCoding.Day3.pizza_order()
