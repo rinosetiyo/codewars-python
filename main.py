@@ -172,8 +172,44 @@ class InteractiveCoding():
       random_number = random.randint(0, box - 1)
       random_name = names[random_number]
       print(f"{random_name} is going to pay the bill !")
-      
-InteractiveCoding.Day4.banker_roulete()
+
+  class Day5():
+    # python loops
+    def average_height():
+      student_heights = [180, 124, 165, 173, 189, 169, 146]
+      student = 0
+      number = 0
+      for student_byone in student_heights:
+        student += student_byone
+        number += 1
+      average = student / number
+      print(round(average))
+
+    def high_score():
+      student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+      high_score = 0
+      for student in student_scores:
+        if student > high_score:
+          high_score = student
+      print(high_score)
+        
+    def even_number():
+      for even in range(2, 101, 2):
+        even
+        print(even)
+
+    def fizzbuzz():
+      for number in range(1, 101):
+        if number % 3 == 0 and number % 5 == 0:
+          print("FizzBuzz")
+        elif number % 5 == 0:
+          print("Buzz")
+        elif number % 3 == 0:
+          print("Fizz")
+        else:
+          print(number)
+          
+InteractiveCoding.Day5.fizzbuzz()
 class Projects():
 # Project of 100 Day code python
   def band_name_generator():
@@ -214,3 +250,36 @@ class Projects():
     else:
       print("your input is invalid.")
 
+  def rock_scissors_paper():
+    import random as r
+
+    welcome = "Welcome to rock scissors and paper, for play this game you have choose one \n rock(0), scissors(2), and paper(1) \n"
+    print(welcome)
+    
+    your_turn = int(input("you have to choose one ! "))
+    computer = r.randint(0,2)
+
+    if your_turn == 0 and computer == 1:
+      print("You choose rock, computer choose paper, computer win")
+    elif your_turn == 0 and computer == 2:
+      print("You choose rock, computer choose scissors, you win")
+    elif your_turn == 1 and computer == 0:
+      print("You choose paper, computer choose rock, you win")
+    elif your_turn == 1 and computer == 2:
+      print("You choose paper, computer choose scissors, computer win")
+    elif your_turn == 2 and computer == 0:
+      print("You choose scissors, computer choose rock, computer win")
+    elif your_turn == 2 and computer == 1:
+      print("You choose scissors, computer choose paper, you win")
+    elif your_turn == computer:
+      print("Draw")
+      if your_turn == 1:
+        print("You choose paper and computer choose paper")
+      elif your_turn == 2:
+        print("You choose scissors and computer choose scissors")
+      elif your_turn == 0:
+        print("You choose rock and computer choose rock")
+    else:
+      print("Your input is invalid")
+      
+  # def password_generator():
