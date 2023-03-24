@@ -209,7 +209,6 @@ class InteractiveCoding():
         else:
           print(number)
           
-InteractiveCoding.Day5.fizzbuzz()
 class Projects():
 # Project of 100 Day code python
   def band_name_generator():
@@ -281,5 +280,33 @@ class Projects():
         print("You choose rock and computer choose rock")
     else:
       print("Your input is invalid")
-      
-  # def password_generator():
+
+  def pass_generator():
+    import random
+    letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    numbers = ['1','2','3','4','5','6','7','8','9','0']
+    symbols = ['!','@','#','$','%','^','&','*']
+    many_letter = int(input("How many letters did you want to generate: "))
+    many_number = int(input("How many numbers did you want to generate: "))
+    many_symbol = int(input("How many symbols did you want to generate: "))
+    generate = []
+    for ran_letter in range(0, many_letter):
+      chosen_letter = random.choice(letters)
+      generate.append(chosen_letter)
+ 
+    for ran_number in range(0, many_number):
+      chosen_number = random.choice(numbers)
+      generate.append(chosen_number)
+   
+    for ran_symbol in range(0, many_symbol):
+      chosen_symbol = random.choice(symbols)
+      generate.append(chosen_symbol)
+    random.shuffle(generate)
+    print(generate)
+  def hangman():
+    import random as r
+    word_list = ["ardvark","baboon","camel"]
+    random_word = r.choice(word_list)
+    for slice_word in random_word:
+      print(slice_word)
+Projects.pass_generator()
