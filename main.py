@@ -208,6 +208,13 @@ class InteractiveCoding():
           print("Fizz")
         else:
           print(number)
+
+class codewars():
+  def digitize():
+    number = 1234
+    for test in number:
+      print(test)
+codewars.digitize()
           
 class Projects():
 # Project of 100 Day code python
@@ -309,4 +316,3 @@ class Projects():
     random_word = r.choice(word_list)
     for slice_word in random_word:
       print(slice_word)
-Projects.pass_generator()
