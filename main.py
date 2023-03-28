@@ -209,13 +209,14 @@ class InteractiveCoding():
         else:
           print(number)
 
-class codewars():
-  def digitize():
-    number = 1234
-    for test in number:
-      print(test)
-codewars.digitize()
-          
+class kumite():
+  def odd_number():
+    for x in range(1,21):
+      if x % 2 != 0:
+        print("odd number")
+      else:
+        print(x)
+kumite.odd_number()    
 class Projects():
 # Project of 100 Day code python
   def band_name_generator():
